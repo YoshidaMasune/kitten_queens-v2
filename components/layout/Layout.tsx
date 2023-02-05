@@ -1,17 +1,26 @@
-import React, { ReactNode } from 'react';
+import React, { ReactElement } from 'react';
+import Footer from './utils/Footer';
+import Navbar from './utils/Navbar';
 
-type Props = {
-  childent: ReactNode;
-};
+interface Props {
+  children: ReactElement;
+}
 
-function Layout({ childent }: Props) {
+function Layout({ children }: Props) {
   return (
-    <div>
-      <section></section>
+    <div className="h-screen flex flex-col">
+      {/* nav */}
+      {/* className="flex-[0_0_auto]" */}
+      <Navbar />
+      {/* nav */}
 
-      <section>{childent}</section>
+      {/* content */}
+      <section className="flex-[1_0_auto]">{children}</section>
 
-      <section></section>
+      {/* footer */}
+      <section className="flex-0_0_auto]">
+        <Footer />
+      </section>
     </div>
   );
 }
