@@ -6,7 +6,7 @@ import getData from '@/data/fetchdata/getData';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 
-function index() {
+function Home() {
   const [blogs, setBlogs] = useState<Array<blog | any>>([]);
   useEffect(() => {
     const data = getData('blogs');
@@ -54,4 +54,4 @@ function index() {
   );
 }
 
-export default index;
+export default Home;
