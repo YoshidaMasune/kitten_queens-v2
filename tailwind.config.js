@@ -16,5 +16,5 @@ module.exports = {
       fontFamily: { sans: ['Kanit', ...defaultTheme.fontFamily.sans] },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

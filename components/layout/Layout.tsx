@@ -3,7 +3,7 @@ import Footer from './utils/Footer';
 import Navbar from './utils/Navbar';
 
 interface Props {
-  children: ReactElement;
+  children: ReactElement | any;
 }
 
 function Layout({ children }: Props) {

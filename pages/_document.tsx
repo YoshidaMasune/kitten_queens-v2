@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" className="scroll-smooth">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -10,6 +10,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/logo/logo_cat.png" />
       </Head>
       <body>
         <Main />

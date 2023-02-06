@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Searchbar from '../Searchbar';
-import { log } from 'console';
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -25,8 +24,6 @@ function Navbar() {
       windowRef.current.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos, isClient]);
-
-  console.log(visible);
 
   return (
     <div
