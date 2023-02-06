@@ -8,7 +8,7 @@ interface Props {
 
 function Layout({ children }: Props) {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen max-h-auto flex flex-col">
       {/* nav */}
       {/* className="flex-[0_0_auto]" */}
       <Navbar />

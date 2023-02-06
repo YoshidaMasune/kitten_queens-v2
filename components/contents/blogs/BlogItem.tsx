@@ -8,7 +8,7 @@ interface blogItem {
 
 function BlogItem({ blog }: blogItem) {
   return (
-    <div className="grid grid-cols-[1fr_4fr] shadow-md rounded-md overflow-hidden">
+    <div className="grid grid-cols-[1fr_3fr] shadow-md rounded-md overflow-hidden">
       <div>
         <Image
           src={`/cats/persian/06.png`}

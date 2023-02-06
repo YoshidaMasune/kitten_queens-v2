@@ -28,7 +28,7 @@ function Navbar() {
   return (
     <div
       className={`bg-white sticky flex-[0_0_auto] ${
-        visible ? 'top-0' : '-top-[87px]'
+        visible ? 'top-0' : 'md:-top-[87px] -top-[60px]'
       } z-50 shadow-md transition-all duration-300`}
     >
       <div>

@@ -12,6 +12,8 @@ function index() {
     setBlogs(data);
   }, []);
 
+  console.log();
+
   return (
     <div>
       <Head>
@@ -20,7 +22,7 @@ function index() {
       <Layout>
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] container lg:w-3/5 mx-auto">
           {/* header */}
-          <div>
+          <div className="space-y-32">
             <section>
               <article className="text-4xl">
                 <h1 className="text-sky-500">บทความ</h1>
@@ -31,7 +33,7 @@ function index() {
             {/* content */}
             <section>
               {blogs.length === 0 ? null : (
-                <div className="grid grid-flow-row mx-auto gap-y-10 auto-rows-fr">
+                <div className="grid grid-flow-row w-4/5 gap-y-20 auto-rows-fr">
                   {blogs.map((blog, index) => {
                     return <BlogItem key={index} blog={blog} />;
                   })}
