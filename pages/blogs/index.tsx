@@ -10,7 +10,8 @@ function index() {
   const [blogs, setBlogs] = useState<Array<blog | any>>([]);
   useEffect(() => {
     const data = getData('blogs');
-    setBlogs(data);
+
+    return setBlogs(data);
   }, []);
 
   console.log();
