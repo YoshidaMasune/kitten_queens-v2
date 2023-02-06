@@ -1,5 +1,6 @@
 import { blog } from '@/data/blogs';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface blogItem {
@@ -27,7 +28,9 @@ function BlogItem({ blog }: blogItem) {
           <p className="line-clamp-3 indent-5">
             {blog.subtitle || blog.contents}
           </p>
-          <button className="btn-primary self-end ">อ่านต่อ</button>
+          <button className="btn-primary self-end ">
+            <Link href={`/blogs/${blog.id}`}>อ่านต่อ</Link>
+          </button>
         </article>
       </div>
     </div>

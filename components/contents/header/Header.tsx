@@ -17,6 +17,8 @@ function Header() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
   });
   const [slideRef, setSideRef] = useState<any>();
   const [knowlages, setKnowlages] = useState<Array<any>>([]);

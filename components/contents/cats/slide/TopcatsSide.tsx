@@ -21,9 +21,11 @@ function TopcatsSide() {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
   return (
-    <div>
+    <div className="">
       <div className="w-3/5 mx-auto">
         {cats.length === 0 ? null : (
           <div className="relative">

@@ -1,3 +1,6 @@
+import { knowlage } from './../knowlages';
+import { cat } from './../cats';
+import { blog } from './../blogs';
 // fetch data from @data/
 import { cats } from '@/data/cats';
 import { blogs } from '@/data/blogs';
@@ -19,17 +22,35 @@ function getData(dataName: string) {
 }
 
 interface blogget {
-  id?: number;
+  id: number;
 }
 
-const getBlog = ({ id }: blogget) => {
-  return blogs.filter((blog) => (blog.id === id ? true : false));
+const getBlog = (id: any) => {
+  let data: blog | any = {};
+  blogs.map((item) => {
+    if (item.id == Number(id)) {
+      data = { ...item };
+    }
+  });
+  return data;
 };
 const getcat = ({ id }: blogget) => {
-  return cats.filter((blog) => (blog.id === id ? true : false));
+  let data: cat | any = {};
+  cats.map((item) => {
+    if (item.id == Number(id)) {
+      data = { ...item };
+    }
+  });
+  return data;
 };
 const getknowlages = ({ id }: blogget) => {
-  return knowlages.filter((blog) => (blog.id === id ? true : false));
+  let data: knowlage | any = {};
+  knowlages.map((item) => {
+    if (item.id == Number(id)) {
+      data = { ...item };
+    }
+  });
+  return data;
 };
 
 export { getBlog, getcat, getknowlages };

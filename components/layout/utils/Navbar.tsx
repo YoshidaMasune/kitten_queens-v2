@@ -49,7 +49,7 @@ function Navbar() {
                   />
                 </div>
                 <div className="self-end ">
-                  <h2 className="space-x-2 hidden sm:block sm:text-sm md:text-lg lg:text-4xl">
+                  <h2 className="space-x-2 hidden sm:block sm:text-sm md:text-lg lg:text-xl">
                     <span className="text-sky-500">kitten</span>
                     <span className="text-yellow-500">queen</span>
                   </h2>

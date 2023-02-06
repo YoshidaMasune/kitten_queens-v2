@@ -18,14 +18,18 @@ export default function Home() {
               <Header />
             </div>
 
-            <div>
+            <div className="bg-slate-100 pt-10">
               <div className="my-20">
                 <article>
-                  <h1 className="text-4xl text-center">Top 10 Cats</h1>
+                  <h1 className="text-4xl text-slate-700  text-center">
+                    Top 10 Cats
+                  </h1>
                 </article>
               </div>
               <TopcatsSide />
             </div>
+
+            <div></div>
           </Layout>
         </div>
       </main>
