@@ -1,4 +1,4 @@
-import BlogItem from '@/components/contents/blogs/blogItem';
+import BlogItem from '@/components/contents/blogs/BlogItem';
 import Layout from '@/components/layout/Layout';
 import SidebarBlogs from '@/components/layout/utils/SidebarBlogs';
 import { blog } from '@/data/blogs';
@@ -6,7 +6,7 @@ import getData from '@/data/fetchdata/getData';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 
-function Home() {
+function index() {
   const [blogs, setBlogs] = useState<Array<blog | any>>([]);
   useEffect(() => {
     const data = getData('blogs');
@@ -54,4 +54,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default index;
