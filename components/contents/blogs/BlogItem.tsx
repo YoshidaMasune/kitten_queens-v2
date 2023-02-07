@@ -2,6 +2,7 @@ import { blog } from '@/data/blogs';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { BsFillCaretRightFill } from 'react-icons/bs';
 
 interface blogItem {
   blog: blog;
@@ -9,7 +10,7 @@ interface blogItem {
 
 function BlogItem({ blog }: blogItem) {
   return (
-    <div className="grid grid-cols-[1fr_3fr] shadow-md rounded-md overflow-hidden">
+    <div className="grid grid-cols-[1fr,_2fr] drop-shadow-lg bg-gray-200 hover:skew-y-1  duration-200 ease-in-out shadow-md rounded-md overflow-hidden">
       <div>
         <Image
           src={`/cats/persian/06.png`}
@@ -23,13 +24,15 @@ function BlogItem({ blog }: blogItem) {
 
       {/* content */}
       <div>
-        <article className="flex flex-col justify-between h-auto">
-          <h3 className="text-lg">{blog.head}</h3>
+        <article className="flex flex-col p-3 justify-between h-auto">
+          <h3 className="text-lg text-yellow-600 font-semi">{blog.head}</h3>
           <p className="line-clamp-3 indent-5">
             {blog.subtitle || blog.contents}
           </p>
           <button className="btn-primary self-end ">
-            <Link href={`/blogs/${blog.id}`}>อ่านต่อ</Link>
+            <Link href={`/blogs/${blog.id}`} className="flex items-center">
+              อ่านต่อ <BsFillCaretRightFill />
+            </Link>
           </button>
         </article>
       </div>

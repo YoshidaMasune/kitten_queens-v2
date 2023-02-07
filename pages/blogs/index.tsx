@@ -8,10 +8,10 @@ function index() {
 
   return (
     <div>
-      <Head>
-        <title>blogs</title>
-      </Head>
       <Layout>
+        <Head>
+          <title>blogs</title>
+        </Head>
         <Blog />
       </Layout>
     </div>

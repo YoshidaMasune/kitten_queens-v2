@@ -9,7 +9,7 @@ function Searchbar() {
     window.open(searchURL, '_blank');
   };
   return (
-    <div className="border rounded-full overflow-hidden">
+    <div className="border rounded-full overflow-hidden focus:selection:">
       <form className="py-2" onSubmit={formSubmit}>
         <input
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

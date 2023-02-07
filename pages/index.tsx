@@ -1,5 +1,7 @@
 import TopcatsSide from '@/components/contents/cats/slide/TopcatsSide';
 import Header from '@/components/contents/header/Header';
+import TipKnowlage from '@/components/contents/knowlageTip/TipKnowlage';
+import CatsVidios from '@/components/contents/vides/CatsVidios';
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
 
@@ -18,8 +20,8 @@ export default function Home() {
               <Header />
             </div>
 
-            <div className="bg-slate-100 pt-10">
-              <div className="my-20">
+            <div className="bg-slate-100 py-20">
+              <div className="mb-10">
                 <article>
                   <h1 className="text-4xl text-slate-700  text-center">
                     Top 10 Cats
@@ -29,7 +31,13 @@ export default function Home() {
               <TopcatsSide />
             </div>
 
-            <div></div>
+            <div>
+              <TipKnowlage />
+            </div>
+
+            <div className="bg-slate-200">
+              <CatsVidios />
+            </div>
           </Layout>
         </div>
       </main>
