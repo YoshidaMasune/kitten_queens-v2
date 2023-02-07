@@ -1,3 +1,4 @@
+import Cats from '@/components/contents/cats/Cats';
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
 import React from 'react';
@@ -8,7 +9,9 @@ function index() {
       <Head>
         <title>cats</title>
       </Head>
-      <Layout>conten</Layout>
+      <Layout>
+        <Cats />
+      </Layout>
     </div>
   );
 }

@@ -17,7 +17,7 @@ function Header() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
   });
   const [slideRef, setSideRef] = useState<any>();
@@ -41,19 +41,17 @@ function Header() {
             })}
           </Slide>
 
-          <div className="absolute bottom-0 left-2/4 -translate-x-2/4 text-4xl space-x-5 ">
+          <div className="absolute lg:bottom-0 bottom-2/4 w-full lg:w-fit left-2/4 -translate-x-2/4 lg:text-4xl lg:space-x-5">
             <button
               onClick={slideRef?.slickPrev}
-              className="aspect-square p-2 text-yellow-700 hover:bg-sky-500 rounded-full
-              transition-colors duration-200 hover:text-white"
+              className="lg:static absolute left-0 p-2 slick-btn"
             >
               <BsChevronCompactLeft />
             </button>
 
             <button
               onClick={slideRef?.slickNext}
-              className="aspect-square p-2 text-yellow-700
-              transition-colors duration-200 hover:bg-sky-500 rounded-full hover:text-white"
+              className="p-2 lg:static absolute right-0 slick-btn"
             >
               <BsChevronCompactRight />
             </button>

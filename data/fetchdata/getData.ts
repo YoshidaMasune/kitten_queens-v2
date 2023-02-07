@@ -21,10 +21,6 @@ function getData(dataName: string) {
   }
 }
 
-interface blogget {
-  id: number;
-}
-
 const getBlog = (id: any) => {
   let data: blog | any = {};
   blogs.map((item) => {
@@ -34,7 +30,7 @@ const getBlog = (id: any) => {
   });
   return data;
 };
-const getcat = ({ id }: blogget) => {
+const getcat = (id: any) => {
   let data: cat | any = {};
   cats.map((item) => {
     if (item.id == Number(id)) {
@@ -43,7 +39,7 @@ const getcat = ({ id }: blogget) => {
   });
   return data;
 };
-const getknowlages = ({ id }: blogget) => {
+const getknowlages = (id: any) => {
   let data: knowlage | any = {};
   knowlages.map((item) => {
     if (item.id == Number(id)) {

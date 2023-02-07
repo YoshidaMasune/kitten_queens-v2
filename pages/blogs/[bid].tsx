@@ -25,7 +25,7 @@ function Bid() {
     <div>
       <Layout>
         {loading ? null : (
-          <div className=" grid grid-cols-1 md:grid-cols-[2fr,_1fr] mt-20 container lg:w-3/5 mx-auto gap-x-3">
+          <div className=" grid grid-cols-1 md:grid-cols-[2fr,_1fr] mt-20 container lg:w-3/5 mx-auto gap-x-3 px-4">
             {/* content */}
             <div className=" flex flex-col">
               {/* head title */}

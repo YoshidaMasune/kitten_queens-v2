@@ -25,7 +25,7 @@ function Blog() {
         {/* content */}
         <section>
           {blogs.length === 0 ? null : (
-            <div className="grid grid-flow-row w-4/5 gap-y-10 auto-rows-fr">
+            <div className="grid grid-flow-row w-11/12 mx-auto md:w-4/5 gap-y-10 auto-rows-fr">
               {blogs.map((blog, index) => {
                 return <BlogItem key={index} blog={blog} />;
               })}

@@ -29,7 +29,7 @@ function Navbar() {
     <div
       className={`bg-white sticky flex-[0_0_auto] ${
         visible ? 'top-0' : 'md:-top-[87px] -top-[60px]'
-      } z-50 shadow-md transition-all duration-300`}
+      } z-50 shadow-md shadow-yellow-300 transition-all duration-300`}
     >
       <div>
         {/* top bar */}
@@ -86,7 +86,7 @@ interface navItem {
 }
 const NavItem = ({ href, content }: navItem) => {
   return (
-    <li className="px-3 hover:bg-slate-200 ease-in duration-200 transition-colors hover:text-yellow-600 rounded-full">
+    <li className="px-3 hover:bg-slate-200 font-medium text-sm lg:text-lg ease-in duration-200 transition-colors hover:text-sky-700 rounded-full">
       <Link href={href}>{content}</Link>
     </li>
   );

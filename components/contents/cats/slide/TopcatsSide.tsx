@@ -19,14 +19,31 @@ function TopcatsSide() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1324,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="">
-      <div className="w-3/5 mx-auto">
+      <div className="lg:w-3/5 container mx-auto">
         {cats.length === 0 ? null : (
           <div className="relative">
             <Slider ref={setSlideRef} {...settingSlide}>
@@ -37,13 +54,13 @@ function TopcatsSide() {
 
             <button
               onClick={slideRef?.slickPrev}
-              className="absolute top-2/4 left-0 text-4xl"
+              className="absolute top-2/4 left-0 text-4xl slick-btn"
             >
               <BsChevronCompactLeft />
             </button>
             <button
               onClick={slideRef?.slickNext}
-              className="absolute top-2/4 right-0 text-4xl"
+              className="absolute top-2/4 right-0 text-4xl slick-btn"
             >
               <BsChevronCompactRight />
             </button>

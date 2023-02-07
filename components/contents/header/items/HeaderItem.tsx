@@ -8,8 +8,13 @@ interface headItem {
 
 function HeaderItem({ head }: headItem) {
   return (
-    <div className="w-full grid grid-cols-2 justify-items-center gap-20 py-24">
-      <div className="justify-self-end">
+    <div
+      className="w-full grid md:gap-x-20 gap-y-6 md:gap-y-0 grid-rows-[2fr,_1fr] grid-cols-none sm:grid-rows-none sm:grid-cols-2 
+      justify-items-center py-10 sm:py-24 px-5"
+    >
+      {/* sm for grid responsive rows  */}
+      {/* chang justify-items-center for sm responsive */}
+      <div className="sm:justify-self-end">
         <div className="shadow  overflow-hidden rounded-full">
           <Image
             src={`${head?.img}`}
@@ -21,11 +26,14 @@ function HeaderItem({ head }: headItem) {
           />
         </div>
       </div>
-      <div className="justify-self-start ">
-        <article className="space-y-5 flex flex-col w-3/5">
-          <h3 className="text-4xl">{head?.head}</h3>
-          <p className=" ml-3 indent-10">{head?.content}</p>
 
+      {/* content */}
+      <div className="justify-seft-start">
+        <article className="space-y-5 flex flex-col md:w-3/5 ">
+          {/* head title */}
+          <h3 className=" text-sm sm:text-lg md:text-4xl">{head?.head}</h3>
+          {/* content */}
+          <p className=" ml-3 text-xs lg:text-lg indent-10">{head?.content}</p>
           <button className="btn-primary self-center">บทความอื่นๆ</button>
         </article>
       </div>
