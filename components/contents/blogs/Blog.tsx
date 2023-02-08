@@ -12,18 +12,18 @@ function Blog() {
     return setBlogs(data);
   }, []);
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] container lg:w-3/5 mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] container">
       {/* header */}
-      <div className="space-y-10 mt-24">
-        <section className="border-b">
-          <article className="text-4xl">
-            <h1 className="text-sky-500">บทความ</h1>
-            <h2 className="text-yellow-500 indent-3">Cat{"'"}s blos</h2>
+      <div className="space-y-10 lg:mt-24 mt-5">
+        <section className="border-b ">
+          <article className="text-4xl container lg:w-3/5 mx-auto">
+            <h1 className="text-sky-700">บทความ</h1>
+            <h2 className="text-yellow-700 indent-3">Cat{"'"}s blos</h2>
           </article>
         </section>
 
         {/* content */}
-        <section>
+        <section className="container lg:w-3/5 mx-auto">
           {blogs.length === 0 ? null : (
             <div className="grid grid-flow-row w-11/12 mx-auto md:w-4/5 gap-y-10 auto-rows-fr">
               {blogs.map((blog, index) => {

@@ -56,6 +56,8 @@ function Cid() {
                       arrows: false,
                       autoplay: true,
                       autoplaySpeed: 3000,
+                      fade: true,
+                      dots: true,
                     }}
                   >
                     {cat?.img.map((img, index) => {
