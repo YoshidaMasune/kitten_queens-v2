@@ -28,8 +28,8 @@ function Navbar() {
   return (
     <div
       className={`bg-white sticky flex-[0_0_auto] ${
-        visible ? 'top-0' : 'md:-top-[87px] -top-[60px]'
-      } z-50 shadow-md shadow-yellow-300 transition-all duration-300`}
+        visible ? 'top-0 ' : 'md:-top-[87px] -top-[60px]'
+      } z-50 shadow-sm shadow-slate-100 transition-all duration-300`}
     >
       <div>
         {/* top bar */}
@@ -67,7 +67,11 @@ function Navbar() {
         {/* topbar end */}
 
         {/* nav bar */}
-        <div className="shadow-md">
+        <div
+          className={`shadow-md ${
+            !visible ? 'bg-sky-100' : 'bg-gray-50'
+          } transition-colors duration-700 ease-linear`}
+        >
           {/* navigation list items */}
           <ul className="w-max py-3 grid grid-flow-col mx-auto">
             <NavItem href="/" content="หน้าเเรก" />
@@ -86,7 +90,7 @@ interface navItem {
 }
 const NavItem = ({ href, content }: navItem) => {
   return (
-    <li className="px-3 hover:bg-slate-200 font-medium text-sm lg:text-lg ease-in duration-200 transition-colors hover:text-sky-700 rounded-full">
+    <li className="px-3 hover:bg-slate-200 font-medium text-sm lg:text-lg ease-in duration-200 transition-colors hover:text-yellow-600 rounded-full">
       <Link href={href}>{content}</Link>
     </li>
   );

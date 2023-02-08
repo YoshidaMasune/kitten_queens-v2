@@ -9,20 +9,22 @@ interface headItem {
 function HeaderItem({ head }: headItem) {
   return (
     <div
-      className="w-full grid md:gap-x-20 gap-y-6 md:gap-y-0 grid-rows-[2fr,_1fr] grid-cols-none sm:grid-rows-none sm:grid-cols-2 
-      justify-items-center py-10 sm:py-24 px-5"
+      className="w-full grid gap-y-6 justify-items-center grid-cols-none py-10  px-5
+      sm:grid-cols-2 sm:grid-rows-none sm:py-24
+      md:gap-y-0 md:gap-x-20 
+      "
     >
       {/* sm for grid responsive rows  */}
       {/* chang justify-items-center for sm responsive */}
       <div className="sm:justify-self-end">
-        <div className="shadow  overflow-hidden rounded-full">
+        <div className="shadow overflow-hidden md:rounded-full rounded-md">
           <Image
             src={`${head?.img}`}
             width={700}
             height={700}
             alt="cat"
             priority
-            className="w-full h-auto aspect-square  object-center object-cover"
+            className="w-full h-32 lg:h-auto md:aspect-square object-center object-cover"
           />
         </div>
       </div>

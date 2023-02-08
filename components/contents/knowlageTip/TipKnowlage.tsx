@@ -8,7 +8,7 @@ function TipKnowlage() {
 
   return (
     <div>
-      <div className="grid grid-flow-row auto-rows-[minmax(20rem,_30rem)] w-3/4 mx-auto">
+      <div className="grid grid-flow-row gap-y-16 lg:gap-y-0 auto-rows-[minmax(20rem,_30rem)] w-3/4 mx-auto">
         {knowlages.length === 0 ? null : genKnowlagesItems(knowlages)}
       </div>
     </div>
@@ -33,7 +33,9 @@ const KnowlageItem = ({ knowlage, primary }: knowlageItem) => {
   return (
     <div
       className={`flex items-center ${
-        primary ? 'flex-row' : 'flex-row-reverse'
+        primary
+          ? 'lg:flex-row flex-col-reverse'
+          : 'lg:flex-row-reverse  flex-col-reverse'
       }`}
     >
       <article className="flex-1 space-y-5">

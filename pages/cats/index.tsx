@@ -10,7 +10,16 @@ function index() {
         <title>cats</title>
       </Head>
       <Layout>
-        <Cats />
+        <div>
+          <header className="h-64 flex items-center justify-center from-sky-200 to-yellow-100 bg-gradient-to-br">
+            <article className="text-center">
+              <h1 className="text-4xl font-medium text-slate-900">
+                top 10 cats
+              </h1>
+            </article>
+          </header>
+          <Cats />
+        </div>
       </Layout>
     </div>
   );

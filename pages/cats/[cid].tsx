@@ -38,15 +38,15 @@ function Cid() {
           {/* main content */}
           <main>
             {/* header bleed of cat */}
-            <header className="mt-4">
-              <article className="text-center font-semibold text-slate-700 text-lg">
+            <header className="mt-4 lg:mt-20">
+              <article className="text-center font-semibold text-slate-700 text-lg lg:text-4xl">
                 <h1>{cat?.bleed.eng}</h1>
                 <h1>{cat?.bleed.th}</h1>
               </article>
             </header>
 
             {/* content of cat */}
-            <div className="grid grid-flow-row gap-y-4 lg:gap-y-32 mt-10 lg:mt-32 ">
+            <div className="grid grid-flow-row auto-rows-min gap-y-4 lg:gap-y-32 mt-10 lg:mt-32 ">
               {/* title info */}
               <section className="grid grid-cols-2 gap-x-10 container mx-auto">
                 {/* images of cat slider */}
@@ -91,27 +91,29 @@ function Cid() {
               </section>
 
               {/* ความเป็นมา */}
-              <section className="bg-sky-200">
+              <section className="bg-sky-200 min-h-max lg:h-64 flex flex-col justify-center">
                 <article className="container mx-auto p-10 ">
                   <h2 className="text-center text-lg font-semibold">
                     ความเป็นมา
                   </h2>
-                  <p className="indent-5">{cat?.derivation}</p>
+                  <p className="indent-5 text-center">{cat?.derivation}</p>
                 </article>
               </section>
 
               {/* ลักษณะทั่วไป */}
-              <section>
-                <div>
+              <section className="h-96 gap-10 flex flex-col lg:flex-row lg:h-[30rem] p-10 lg:w-3/5 mx-auto">
+                <div className="flex-1 overflow-hidden rounded-md">
                   <Image
                     src={`${cat?.general_nature.img}`}
                     width={500}
                     height={500}
                     alt={`${cat?.bleed.eng}`}
                     priority
+                    className="object-contain lg:object-top h-full w-full lg:object-cover"
                   />
                 </div>
-                <div>
+
+                <div className="lg:flex-1 shrink-auto">
                   <article>
                     <h2>ลักษณะทั่วไป</h2>
                     <p>{cat?.general_nature.info}</p>
@@ -120,22 +122,25 @@ function Cid() {
               </section>
 
               {/* ลักษณะนิสัย */}
+              <section className="bg-slate-100">
+                <div className="h-96  gap-10 flex-col lg:h-[30rem] flex lg:flex-row-reverse p-10 lg:w-3/5 mx-auto">
+                  <div className="flex-1 overflow-hidden rounded-md">
+                    <Image
+                      src={`${cat?.general_character.img}`}
+                      width={500}
+                      height={500}
+                      alt={`${cat?.bleed.eng}`}
+                      priority
+                      className="object-contain lg:object-top h-full w-full lg:object-cover"
+                    />
+                  </div>
 
-              <section>
-                <div>
-                  <Image
-                    src={`${cat?.general_character.img}`}
-                    width={500}
-                    height={500}
-                    alt={`${cat?.bleed.eng}`}
-                    priority
-                  />
-                </div>
-                <div>
-                  <article>
-                    <h2>ลักษณะนิสัย</h2>
-                    <p>{cat?.general_character.info}</p>
-                  </article>
+                  <div className="shrink-auto lg:flex-1">
+                    <article>
+                      <h2>ลักษณะนิสัย</h2>
+                      <p>{cat?.general_character.info}</p>
+                    </article>
+                  </div>
                 </div>
               </section>
             </div>
