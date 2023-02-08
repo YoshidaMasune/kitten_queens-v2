@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { cat } from '@/data/cats';
+import Link from 'next/link';
 
 interface catitem {
   cat: cat;
@@ -32,9 +33,9 @@ function CatSlideItem({ cat }: catitem) {
         <article className="space-y-1 flex flex-col ">
           <h3 className="text-lg text-center">{cat.bleed.th}</h3>
           <p className="line-clamp-3 px-5 indent-5">{cat.derivation}</p>
-          <button className="w-fit hover:w-10/12 transition-[width] ease-in-out self-center btn-primary">
-            อ่านต่อ
-          </button>
+          <Link href={`/cats/${cat.id}`} className="self-center w-fit">
+            <button className="btn-primary">อ่านต่อ</button>
+          </Link>
         </article>
       </div>
     </div>

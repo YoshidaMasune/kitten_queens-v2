@@ -10,6 +10,7 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import TopcatsSide from '@/components/contents/cats/slide/TopcatsSide';
 
 function Cid() {
   const [cat, setCat] = useState<cat>();
@@ -145,6 +146,10 @@ function Cid() {
                   </div>
                 </div>
               </section>
+            </div>
+
+            <div className="mt-32">
+              <TopcatsSide />
             </div>
           </main>
         </Layout>

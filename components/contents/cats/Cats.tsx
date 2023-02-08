@@ -13,16 +13,16 @@ function Cats() {
         <>
           {genCats(cats)}
 
-          <div></div>
-          <div>
-            <Image
-              src="/logo/logo_cat.png"
-              width={1000}
-              height={1000}
-              priority
-              alt="logo cat"
-            />
-          </div>
+          <div className="lg:block hidden"></div>
+
+          <Image
+            src="/logo/logo_cat.png"
+            width={1000}
+            height={1000}
+            priority
+            alt="logo cat"
+            className="w-auto h-full object-center lg:block hidden"
+          />
         </>
       )}
     </div>

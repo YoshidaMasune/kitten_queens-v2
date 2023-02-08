@@ -21,10 +21,9 @@ function HeadCat() {
       windowRef.current.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos, isClient]);
-  console.log(visible);
   return (
     <header
-      className={`flex h-32 duration-300 sticky items-center z-10 items-center justify-center from-sky-200 to-yellow-100 bg-gradient-to-br`}
+      className={`flex h-32 duration-300 sticky items-center z-10  justify-center from-sky-200 to-yellow-100 bg-gradient-to-br`}
     >
       <article className="text-center">
         <h1 className={`text-4xl font-medium text-slate-900`}>top 10 cats</h1>

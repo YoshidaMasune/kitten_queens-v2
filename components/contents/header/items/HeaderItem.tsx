@@ -1,5 +1,6 @@
 import { knowlage } from '@/data/knowlages';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface headItem {
@@ -36,7 +37,9 @@ function HeaderItem({ head }: headItem) {
           <h3 className=" text-sm sm:text-lg md:text-4xl">{head?.head}</h3>
           {/* content */}
           <p className=" ml-3 text-xs lg:text-lg indent-10">{head?.content}</p>
-          <button className="btn-primary self-center">บทความอื่นๆ</button>
+          <Link href={`/blogs`}>
+            <button className="btn-primary self-center">บทความอื่นๆ</button>
+          </Link>
         </article>
       </div>
     </div>
