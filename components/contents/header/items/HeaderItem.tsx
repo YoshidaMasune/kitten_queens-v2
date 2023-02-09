@@ -25,7 +25,7 @@ function HeaderItem({ head }: headItem) {
             height={700}
             alt="cat"
             priority
-            className="w-full h-32 lg:h-auto md:aspect-square object-center object-cover"
+            className="w-full h-32 lg:h-96 md:aspect-square aspect-auto object-center object-cover"
           />
         </div>
       </div>

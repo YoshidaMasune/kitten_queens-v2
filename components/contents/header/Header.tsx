@@ -31,7 +31,7 @@ function Header() {
   return (
     <div className="">
       {knowlages.length === 0 ? null : (
-        <div className="relative">
+        <div className="relative max-h-[60vh]">
           <Slide ref={setSideRef} {...slideSetting}>
             {knowlages.map((knowlage, index) => {
               if (index > 3) {
