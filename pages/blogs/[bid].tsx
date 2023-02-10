@@ -98,7 +98,9 @@ function Bid() {
                     rel="noreferrer"
                   >
                     <span>ที่มา:</span>
-                    <span className="">{blog?.cradit.slice(0, 30)}...</span>
+                    <span className="">
+                      {blog ? decodeURI(blog.cradit) : ''}
+                    </span>
                   </a>
                 </div>
               </div>
