@@ -60,9 +60,9 @@ const CatItem = ({ cat }: catItem) => {
 
             {/* title => cat.derivation */}
             <p className="line-clamp-2 text-xs indent-2">{cat.derivation}</p>
-            <button className="btn-primary w-fit self-end text-sm">
-              <Link href={`/cats/${cat.id}`}>readmore</Link>
-            </button>
+            <Link href={`/cats/${cat.id}`} className="self-center">
+              <button className="btn-primary w-fit  text-sm">อ่านต่อ</button>
+            </Link>
           </article>
         </div>
       </div>

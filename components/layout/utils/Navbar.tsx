@@ -37,24 +37,26 @@ function Navbar() {
           <div className="container mx-auto">
             <div className=" flex flex-row items-center justify-between">
               {/* logo */}
-              <section className="flex">
-                <div className="">
-                  <Image
-                    src={`/logo/logo_cat.png`}
-                    width={100}
-                    height={100}
-                    alt="cats"
-                    priority
-                    className="md:w-20 w-14"
-                  />
-                </div>
-                <div className="self-end ">
-                  <h2 className="space-x-2 hidden sm:block sm:text-sm md:text-lg lg:text-xl">
-                    <span className="text-sky-500">kitten</span>
-                    <span className="text-yellow-500">queen</span>
-                  </h2>
-                </div>
-              </section>
+              <Link href={`/`}>
+                <section className="flex">
+                  <div className="">
+                    <Image
+                      src={`/logo/logo_cat.png`}
+                      width={100}
+                      height={100}
+                      alt="cats"
+                      priority
+                      className="md:w-20 w-14"
+                    />
+                  </div>
+                  <div className="self-end ">
+                    <h2 className="space-x-2 hidden sm:block sm:text-sm md:text-lg lg:text-xl">
+                      <span className="text-sky-500">kitten</span>
+                      <span className="text-yellow-500">queen</span>
+                    </h2>
+                  </div>
+                </section>
+              </Link>
 
               {/* search bar */}
               <section>

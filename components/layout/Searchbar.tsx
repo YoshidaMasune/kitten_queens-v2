@@ -9,7 +9,7 @@ function Searchbar() {
     window.open(searchURL, '_blank');
   };
   return (
-    <div className="border rounded-full overflow-hidden focus:selection:">
+    <div className="border w-fit bg-white rounded-full overflow-hidden focus:selection:">
       <form className="py-2" onSubmit={formSubmit}>
         <input
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -17,6 +17,7 @@ function Searchbar() {
           }
           type="text"
           placeholder="Search"
+          required
           className="focus:outline-none ml-2"
         />
         <span className="p-2 hover:bg-sky-400 duration-100 border-l text-center hover:text-white">
