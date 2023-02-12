@@ -31,8 +31,10 @@ function CatSlideItem({ cat }: catitem) {
       {/* content */}
       <div className="">
         <article className="space-y-1 flex flex-col ">
-          <h3 className="text-lg text-center">{cat.bleed.th}</h3>
-          <p className="line-clamp-3 px-5 indent-5">{cat.derivation}</p>
+          <h3 className="text-lg lg:text-2xl font-normal text-sky-600 text-center">
+            {cat.bleed.th}
+          </h3>
+          <p className="line-clamp-2 px-5 indent-5">{cat.derivation}</p>
           <Link href={`/cats/${cat.id}`} className="self-center w-fit">
             <button className="btn-primary">อ่านต่อ</button>
           </Link>

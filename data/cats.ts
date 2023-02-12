@@ -4,6 +4,7 @@ export interface cat {
     eng: string;
     th: string;
   };
+  price: string;
   locate: {
     eng: string;
     th: string;
@@ -24,6 +25,7 @@ export interface cat {
 const cats: Array<cat> = [
   {
     id: 1,
+    price: '1,000-8,000 บาท',
     bleed: {
       eng: 'Persian',
       th: 'เปอร์เซีย ',
@@ -52,6 +54,7 @@ const cats: Array<cat> = [
   },
   {
     id: 2,
+    price: '3,000-40,000 บาท',
     img: [
       '/cats/USAshorthair/01.png',
       '/cats/USAshorthair/02.png',
@@ -79,6 +82,7 @@ const cats: Array<cat> = [
   },
   {
     id: 3,
+    price: '15,000-80,000 บาท',
     img: ['/cats/exotic/07.png', '/cats/exotic/02.png', '/cats/exotic/03.png'],
     bleed: {
       eng: 'Exotic',
@@ -103,6 +107,7 @@ const cats: Array<cat> = [
   },
   {
     id: 4,
+    price: '15,000-150,000 บาท',
     img: ['/cats/Bengal/01.jpg', '/cats/Bengal/02.jpg', '/cats/Bengal/03.jpg'],
     bleed: {
       eng: 'Bengal',
@@ -127,6 +132,7 @@ const cats: Array<cat> = [
   },
   {
     id: 5,
+    price: '5,000-70,000 บาท',
     img: [
       '/cats/scottish_fold/01.png',
       '/cats/scottish_fold/02.png',
@@ -155,6 +161,7 @@ const cats: Array<cat> = [
   },
   {
     id: 6,
+    price: '25,000-70,000 บาท',
     img: [''],
     bleed: {
       eng: 'Sphynx',
@@ -179,6 +186,7 @@ const cats: Array<cat> = [
   },
   {
     id: 7,
+    price: '10,000-60,000 บาท',
     img: [
       '/cats/main_coon/01.png',
       '/cats/main_coon/03.png',
@@ -207,6 +215,7 @@ const cats: Array<cat> = [
   },
   {
     id: 8,
+    price: '3,000-7,000 บาท',
     img: [
       '/cats/Siamese/01.jpg',
       '/cats/Siamese/02.jpg',
@@ -235,6 +244,7 @@ const cats: Array<cat> = [
   },
   {
     id: 9,
+    price: '15,000-80,000 บาท',
     img: ['/cats/bs/01.jpeg', '/cats/bs/02.jpeg', '/cats/bs/03.jpeg'],
     bleed: {
       eng: 'British shorthair',
@@ -259,6 +269,7 @@ const cats: Array<cat> = [
   },
   {
     id: 10,
+    price: '2500-4500 บาท',
     img: [''],
     bleed: {
       eng: 'Korat',
