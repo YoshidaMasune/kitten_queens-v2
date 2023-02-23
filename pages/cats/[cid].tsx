@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { cat } from '@/data/cats';
 import { getcat } from '@/data/fetchdata/getData';
@@ -15,18 +15,35 @@ import TopcatsSide from '@/components/contents/cats/slide/TopcatsSide';
 function Cid() {
   const [cat, setCat] = useState<cat>();
   const [loading, setLoading] = useState<boolean>(true);
+  const isClient = typeof window === 'object';
+  const windowRef: any = useRef(isClient ? window : null);
   const router = useRouter();
   const { cid } = router.query;
+  const [animateTime, setAnimateTime] = useState(false)
 
   useEffect(() => {
     setLoading(true);
     if (cid === undefined) {
-      return;
+      // return;
     } else {
       setCat(getcat(Number(cid)));
       setLoading(false);
+
+      // add animation for contents
+      windowRef.current.addEventListener("scroll", function(e) {
+        let winScroll =  parseInt(windowRef.current.scrollY, 10) 
+        const pointScroll = {
+          nature: 530,
+          charactor: 400
+        }
+
+       if (winScroll >= pointScroll.nature && winScroll < pointScroll.nature + 50){
+        setAnimateTime(true)
+       }
+      })
     }
-  }, [cid]);
+  }, [cid, isClient]);
+
 
   return (
     <>
@@ -51,7 +68,7 @@ function Cid() {
               {/* title info */}
               <section className="grid grid-cols-2 gap-x-10 container mx-auto">
                 {/* images of cat slider */}
-                <div className="lg:justify-end">
+                <div className="lg:justify-end fade-ani-l">
                   <Slider
                     {...{
                       arrows: false,
@@ -78,7 +95,7 @@ function Cid() {
                 </div>
 
                 {/* infomation fo cat */}
-                <div>
+                <div className='fade-ani-r'>
                   <article className="flex flex-col gap-5">
                     <section className="flex flex-col">
                       <h2 className="font-bold">การเลี้ยงดู</h2>
@@ -86,7 +103,7 @@ function Cid() {
                     </section>
 
                     <section className="flex gap-5">
-                      <h2>ราคา:</h2>
+                      <h2 className="font-bold">ราคา : </h2>
                       <p>{cat?.price}</p>
                     </section>
                   </article>
@@ -105,7 +122,7 @@ function Cid() {
 
               {/* ลักษณะทั่วไป */}
               <section className="h-96 gap-10 flex flex-col lg:flex-row lg:h-[30rem] p-10 lg:w-3/5 mx-auto">
-                <div className="flex-1 overflow-hidden rounded-md">
+                <div className={`flex-1 overflow-hidden rounded-md ${animateTime? 'fade-ani-l': ''}`}>
                   <Image
                     src={`${cat?.general_nature.img}`}
                     width={500}
@@ -116,7 +133,7 @@ function Cid() {
                   />
                 </div>
 
-                <div className="lg:flex-1 shrink-auto">
+                <div className={`lg:flex-1 shrink-auto ${animateTime? 'fade-ani-r': ''} `}>
                   <article>
                     <h2>ลักษณะทั่วไป</h2>
                     <p>{cat?.general_nature.info}</p>
@@ -127,7 +144,7 @@ function Cid() {
               {/* ลักษณะนิสัย */}
               <section className="bg-slate-100">
                 <div className="h-96  gap-10 flex-col lg:h-[30rem] flex lg:flex-row-reverse p-10 lg:w-3/5 mx-auto">
-                  <div className="flex-1 overflow-hidden rounded-md">
+                  <div className={` ${animateTime? 'fade-ani-l': ''} flex-1 overflow-hidden rounded-md`}>
                     <Image
                       src={`${cat?.general_character.img}`}
                       width={500}
@@ -138,7 +155,7 @@ function Cid() {
                     />
                   </div>
 
-                  <div className="shrink-auto lg:flex-1">
+                  <div className={`${animateTime? 'fade-ani-r': ''} shrink-auto lg:flex-1`}>
                     <article>
                       <h2>ลักษณะนิสัย</h2>
                       <p>{cat?.general_character.info}</p>
@@ -148,7 +165,7 @@ function Cid() {
               </section>
             </div>
 
-            <div className="mt-32">
+            <div className=" mt-32">
               <TopcatsSide />
             </div>
           </main>

@@ -15,3 +15,27 @@
     @apply aspect-square transition-colors rounded-full duration-200 text-yellow-700 hover:text-white hover:bg-sky-500 text-2xl lg:text-4xl;
   }
 }
+
+.fade-ani-l{
+  animation-name: fade-opa-l;
+
+  transition: fade-opa-l 200ms ease-in-out;
+  animation-duration: 1200ms;
+}
+
+.fade-ani-r{
+  animation-name: fade-opa-r;
+
+  transition: fade-opa-r 200ms ease-in-out;
+  animation-duration: 1200ms;
+}
+
+@keyframes fade-opa-l {
+  0% {transform: translateX(-300px);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes fade-opa-r {
+  0% {transform: translateX(300px);}
+  100% {transform: translateX(0);}
+}

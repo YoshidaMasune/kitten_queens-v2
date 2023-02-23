@@ -36,7 +36,7 @@ interface catItem {
 
 const CatItem = ({ cat }: catItem) => {
   return (
-    <div className="relative grid w-4/5 sm:w-44 md:w-54 rounded-lg shadow-[0rem_.12rem_8px_.2rem] shadow-slate-300 hover:shadow-yellow-600">
+    <div className="relative grid w-4/5 sm:w-44 md:w-54 rounded-lg shadow-[0rem_.12rem_8px_.2rem] transition-all duration-200 ease-in-out shadow-slate-300 hover:shadow-yellow-600">
       {/* number */}
       <article className="text-lg text-white absolute -translate-x-4 -translate-y-4 flex items-center justify-center rounded-full w-10 h-10 bg-sky-500">
         <h3>{cat.id}</h3>
