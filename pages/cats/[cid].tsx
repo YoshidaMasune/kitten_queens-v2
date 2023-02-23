@@ -87,7 +87,7 @@ function Cid() {
 
                     <section className="flex gap-5">
                       <h2>ราคา:</h2>
-                      <p>{2009}</p>
+                      <p>{cat?.price}</p>
                     </section>
                   </article>
                 </div>
