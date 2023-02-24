@@ -30,7 +30,7 @@ function Bid() {
             <div className=" flex flex-col">
               {/* head title */}
               <article className="border-b mb-20">
-                <h2 className="text-sky-700 text-4xl">{blog?.head}</h2>
+                <h2 className="text-sky-700 text-4xl font-bold">{blog?.head}</h2>
               </article>
 
               {/* blog contents */}
@@ -56,7 +56,7 @@ function Bid() {
                   {blog?.contentBlogs?.map((data, index) => {
                     return (
                       <div key={index}>
-                        <p className="text-xl">{data.title}</p>
+                        <p className="text-xl font-bold">{data.title}</p>
                         <p className="indent-10">{data.content}</p>
                       </div>
                     );

@@ -31,11 +31,30 @@
 }
 
 @keyframes fade-opa-l {
-  0% {transform: translateX(-300px);}
-  100% {transform: translateX(0);}
+  from {transform: translateX(-300px);}
+  to {transform: translateX(0);}
 }
 
 @keyframes fade-opa-r {
-  0% {transform: translateX(300px);}
-  100% {transform: translateX(0);}
+  from {transform: translateX(300px);}
+  to {transform: translateX(0);}
+}
+
+.hero-scale{
+  animation-name: scale-s-to-b;
+  transition: scale-s-to-b 700ms ease-in-out;
+  animation-duration: 800ms;
+}
+
+@keyframes scale-s-to-b {
+  from {
+    transform: scale(.5);
+    opacity: 0;
+    visibility: none;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
 }

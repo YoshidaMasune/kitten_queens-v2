@@ -19,7 +19,8 @@ function Cid() {
   const windowRef: any = useRef(isClient ? window : null);
   const router = useRouter();
   const { cid } = router.query;
-  const [animateTime, setAnimateTime] = useState(false)
+  const [animateTime, setAnimateTime] = useState(false);
+  const [derivationAnimate, setDerivationAnimate] = useState(false)
 
   useEffect(() => {
     setLoading(true);
@@ -39,6 +40,10 @@ function Cid() {
 
        if (winScroll >= pointScroll.nature && winScroll < pointScroll.nature + 50){
         setAnimateTime(true)
+       }
+
+       if (winScroll >= 550) {
+        setDerivationAnimate(true)
        }
       })
     }
@@ -112,7 +117,7 @@ function Cid() {
 
               {/* ความเป็นมา */}
               <section className="bg-sky-200 min-h-max lg:h-64 flex flex-col justify-center">
-                <article className="container mx-auto p-10 ">
+                <article className={`container mx-auto scale-50 p-10 ${derivationAnimate? 'hero-scale scale-100': ''}`}>
                   <h2 className="text-center text-lg font-semibold">
                     ความเป็นมา
                   </h2>
