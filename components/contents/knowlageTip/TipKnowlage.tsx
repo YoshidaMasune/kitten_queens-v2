@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import getData from '@/data/fetchdata/getData';
 import { knowlage } from '@/data/knowlages';
 import Image from 'next/image';
 
 function TipKnowlage() {
   const [knowlages, setKnowlaages] = useState<Array<any>>(getData('knowlages'));
+ 
 
   return (
     <div>
@@ -30,6 +31,16 @@ interface knowlageItem {
 }
 
 const KnowlageItem = ({ knowlage, primary }: knowlageItem) => {
+  const isClient = typeof window === 'object';
+  const [fadeAnimate, setFadeAnimate] = useState(false)
+  const windowRef: any = useRef(isClient ? window : null);
+
+  useEffect( () => {
+    windowRef.current.addEventListener('scroll', function() {
+      const scrollPageY = windowRef.current.scrollY;
+      scrollPageY >= 500? setFadeAnimate(true): null
+    })
+  }, [isClient])
   return (
     <div
       className={`flex items-center ${
@@ -38,12 +49,12 @@ const KnowlageItem = ({ knowlage, primary }: knowlageItem) => {
           : 'lg:flex-row-reverse  flex-col-reverse'
       }`}
     >
-      <article className="flex-1 space-y-5">
+      <article className={`flex-1 space-y-5 ${fadeAnimate? primary? 'fade-ani-l':'fade-ani-r': ''}`}>
         <h2 className="text-4xl text-slate-700">{knowlage.head}</h2>
         <p className="text-xl leading-relaxed indent-5">{knowlage.content}</p>
       </article>
 
-      <div className="flex-1 overflow-hidden">
+      <div className={`flex-1 overflow-hidden ${fadeAnimate? primary? 'fade-ani-r':'fade-ani-l': ''}`}>
         <div className="w-64 h-64 mx-auto border rounded-full overflow-hidden">
           <Image
             src={`${knowlage.img}`}
