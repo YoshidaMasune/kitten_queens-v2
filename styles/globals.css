@@ -61,13 +61,11 @@
     from {
       transform: scale(.5);
       opacity: 0;
-      visibility: none;
     }
 
     to {
       transform: scale(1);
       opacity: 1;
-      visibility: visible;
     }
   }
 }
