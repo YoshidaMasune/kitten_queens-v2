@@ -16,45 +16,48 @@
   }
 }
 
-.fade-ani-l{
-  animation-name: fade-opa-l;
-
-  transition: fade-opa-l 200ms ease-in-out;
-  animation-duration: 1200ms;
-}
-
-.fade-ani-r{
-  animation-name: fade-opa-r;
-
-  transition: fade-opa-r 200ms ease-in-out;
-  animation-duration: 1200ms;
-}
-
-@keyframes fade-opa-l {
-  from {transform: translateX(-300px);}
-  to {transform: translateX(0);}
-}
-
-@keyframes fade-opa-r {
-  from {transform: translateX(300px);}
-  to {transform: translateX(0);}
-}
-
-.hero-scale{
-  animation-name: scale-s-to-b;
-  transition: scale-s-to-b 700ms ease-in-out;
-  animation-duration: 800ms;
-}
-
-@keyframes scale-s-to-b {
-  from {
-    transform: scale(.5);
-    opacity: 0;
-    visibility: none;
+@layer components {
+  .fade-ani-l{
+    animation-name: fade-opa-l;
+  
+    transition: fade-opa-l 200ms ease-in-out;
+    animation-duration: 1200ms;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
+  
+  .fade-ani-r{
+    animation-name: fade-opa-r;
+  
+    transition: fade-opa-r 200ms ease-in-out;
+    animation-duration: 1200ms;
   }
+  
+  @keyframes fade-opa-l {
+    from {transform: translateX(-300px);}
+    to {transform: translateX(0);}
+  }
+  
+  @keyframes fade-opa-r {
+    from {transform: translateX(300px);}
+    to {transform: translateX(0);}
+  }
+  
+  .hero-scale{
+    animation-name: scale-s-to-b;
+    transition: scale-s-to-b 700ms ease-in-out;
+    animation-duration: 800ms;
+  }
+  
+  @keyframes scale-s-to-b {
+    from {
+      transform: scale(.5);
+      opacity: 0;
+      visibility: none;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
 }
