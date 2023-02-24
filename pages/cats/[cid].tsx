@@ -31,8 +31,8 @@ function Cid() {
       setLoading(false);
 
       // add animation for contents
-      windowRef.current.addEventListener("scroll", function(e) {
-        let winScroll =  parseInt(windowRef.current.scrollY, 10) 
+      windowRef.current.addEventListener("scroll", function() {
+        const winScroll =  windowRef.current.scrollY
         const pointScroll = {
           nature: 530,
           charactor: 400
