@@ -8,55 +8,66 @@
   }
 
   .btn-primary {
-    @apply bg-sky-500 rounded-full transition-all duration-500 px-3 py-1 text-white hover:text-yellow-300 hover:bg-sky-400 hover:shadow-sm hover:shadow-amber-400;
+    @apply bg-sky-500 rounded-full transition-all duration-500 px-3 py-1 text-white hover: text-yellow-300 hover:bg-sky-400 hover:shadow-sm hover:shadow-amber-400;
   }
 
   .slick-btn {
-    @apply aspect-square transition-colors rounded-full duration-200 text-yellow-700 hover:text-white hover:bg-sky-500 text-2xl lg:text-4xl;
+    @apply aspect-square transition-colors rounded-full duration-200 text-yellow-700 hover: text-white hover:bg-sky-500 text-2xl lg:text-4xl;
   }
 }
 
-/* @layer components {
-  .fade-ani-l{
+@layer components {
+  .fade-ani-l {
     animation-name: fade-opa-l;
-  
+
     transition: fade-opa-l 200ms ease-in-out;
     animation-duration: 1200ms;
   }
-  
-  .fade-ani-r{
+
+  .fade-ani-r {
     animation-name: fade-opa-r;
-  
+
     transition: fade-opa-r 200ms ease-in-out;
     animation-duration: 1200ms;
   }
-  
+
   @keyframes fade-opa-l {
-    from {transform: translateX(-300px);}
-    to {transform: translateX(0);}
+    from {
+      transform: translateX(-300px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
   }
-  
+
   @keyframes fade-opa-r {
-    from {transform: translateX(300px);}
-    to {transform: translateX(0);}
+    from {
+      transform: translateX(300px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
   }
-  
-  .hero-scale{
+
+  .hero-scale {
     animation-name: scale-s-to-b;
     transition: scale-s-to-b 700ms ease-in-out;
     animation-duration: 800ms;
   }
-  
+
   @keyframes scale-s-to-b {
     from {
       transform: scale(.5);
       opacity: 0;
       visibility: none;
     }
+
     to {
       transform: scale(1);
       opacity: 1;
       visibility: visible;
     }
   }
-} */
+}
