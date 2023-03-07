@@ -42,7 +42,7 @@ function Cid() {
         setAnimateTime(true)
        }
 
-       if (winScroll >= 550) {
+       if (winScroll >= 500) {
         setDerivationAnimate(true)
        }
       })
@@ -140,8 +140,8 @@ function Cid() {
 
                 <div className={`lg:flex-1 shrink-auto ${animateTime? 'fade-ani-r': ''} `}>
                   <article>
-                    <h2>ลักษณะทั่วไป</h2>
-                    <p>{cat?.general_nature.info}</p>
+                    <h2 className='lg:text-2xl'>ลักษณะทั่วไป</h2>
+                    <p className='lg:leading-9'>{cat?.general_nature.info}</p>
                   </article>
                 </div>
               </section>
@@ -162,8 +162,8 @@ function Cid() {
 
                   <div className={`${animateTime? 'fade-ani-r': ''} shrink-auto lg:flex-1`}>
                     <article>
-                      <h2>ลักษณะนิสัย</h2>
-                      <p>{cat?.general_character.info}</p>
+                      <h2 className='lg:text-2xl '>ลักษณะนิสัย</h2>
+                      <p className='lg:leading-9'>{cat?.general_character.info}</p>
                     </article>
                   </div>
                 </div>

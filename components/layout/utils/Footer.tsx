@@ -5,7 +5,7 @@ import Searchbar from '../Searchbar';
 
 function Footer() {
   return (
-    <div className="mt-64 bg-sky-700 p-5 flex flex-col">
+    <div style={{backgroundImage: 'url("/footer.svg")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} className="mt-64 bg-sky-700 p-5 flex flex-col">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[10vh] gap-y-5 content-center justify-items-center lg:w-3/5 mx-auto">
         <section>
           <ul className="flex gap-3 text-lg text-white">

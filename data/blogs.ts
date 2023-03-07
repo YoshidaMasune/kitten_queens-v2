@@ -44,7 +44,7 @@ export const blogs: Array<blog> = [
       },
     ],
     cradit: `https://guscats.com/%e0%b9%81%e0%b8%a1%e0%b8%a7%e0%b9%80%e0%b8%9a%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%ad%e0%b8%b2%e0%b8%ab%e0%b8%b2%e0%b8%a3-%e0%b8%9b%e0%b8%b1%e0%b8%8d%e0%b8%ab%e0%b8%b2%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%97/`,
-    img: '',
+    img: '/blogs/food.jpg',
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ export const blogs: Array<blog> = [
     ],
     cradit:
       'https://www.sarakadee.com/2020/09/22/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B9%81%E0%B8%A1%E0%B8%A7-%E0%B9%81%E0%B8%A1%E0%B8%A7/',
-    img: '',
+    img: '/blogs/cat-cat.jpg',
   },
   {
     id: 3,
@@ -98,7 +98,7 @@ export const blogs: Array<blog> = [
     ],
     cradit:
       'https://www.yippeehappy.com/th/blog/detail/774/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B2%E0%B8%AA%E0%B9%81%E0%B8%A1%E0%B8%A7-%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88',
-    img: '',
+    img: '/blogs/tasm.jpg',
   },
   {
     id: 4,
@@ -134,6 +134,6 @@ export const blogs: Array<blog> = [
     ],
     cradit:
       'https://www.purina.co.th/articles/cats/behaviour/understanding-cats/spay-benefit',
-    img: '',
+    img: '/blogs/manm.jpg',
   },
 ];

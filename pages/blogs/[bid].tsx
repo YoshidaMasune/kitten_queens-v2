@@ -87,7 +87,7 @@ function Bid() {
 
                 {/* image  */}
                 <div className=" my-10">
-                  <img src={`/cats/Bengal/04.jpg`} alt="" />
+                  <img src={blog?.img} alt="" />
                 </div>
 
                 <div className=" my-20">

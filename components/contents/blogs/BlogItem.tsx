@@ -10,12 +10,12 @@ interface blogItem {
 
 function BlogItem({ blog }: blogItem) {
   return (
-    <div className="grid grid-cols-[1fr,_2fr] drop-shadow-lg bg-gray-200 hover:skew-y-1  duration-200 ease-in-out shadow-md rounded-md overflow-hidden">
-      <div>
+    <div className="grid grid-cols-[1fr,_3fr] drop-shadow-lg overflow-hidden bg-gray-200 hover:translate-x-1 hover:-translate-y-1 duration-200 ease-in-out shadow-md rounded-md ">
+      <div className=''>
         <Image
-          src={`/cats/persian/06.png`}
+          src={blog.img}
           width={400}
-          height={400}
+          height={400}  
           priority
           alt="cats"
           className="w-full h-full object-cover"
